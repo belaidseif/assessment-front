@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  background-color: #0384fc;
+  height: 10vh;
+  width: 100%;
+  position: sticky;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar ul{
   display: flex;
-  flex-direction: column;
+  width: 50%;
+  height: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 50px;
+}
+
+.navbar li{
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px;
+  font-weight: 600;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar li:hover{
+  background-color: #2b99ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* ADD */
+
+.add-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.add-container form{
+  width: 600px;
+
+  margin-top: 20px;
+  padding: 10px 30px;
+}
+
+.add-container .input{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.add-container .input label{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.add-container .input input{
+  outline-style: none;
+  height: 30px;
+  width: 70%;
+  margin-left: 100px;
+  font-size: 16px;
+}
+.add-container .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.add-container .input .submit-button{
+  position: absolute;
+  right: 70px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background-color: #0384fc ;
+  border: none;
+  outline-style: none;
+  font-size: 16px;
+}
+.add-container .input .submit-button:hover{
+  background-color: #2b99ff ;
+}
+
+.add-container .error{
+  text-align: center;
+  color: red;
+  font-size: 14px;
+}
+
+
+/* LIST OF STUDENT */
+
+.list-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.list-container .container{
+  width: 600px;
+  margin-top: 20px;
+  padding: 10px 30px;
+
+}
+.list-container .row{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+.list-container select{
+  width: 200px;
+  height: 30px;
+  outline-style: none;
+  border: 1px solid #49eb34;
+  text-align-last: center;
+  font-size: 16px;
+}
+.list-container select option{
+  font-size: 16px;
+}
+.list-container .list{
+  background-color:  #0384fc;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-container .list .userData{
+  margin: 10px 5px;
+  padding:10px 0;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #49eb34;
+}
+.button-container{
+  width: 70%;
+  
+}
+.sort-button{
+  width: 100px;
+  height: 30px;
+  background-color: #ffa200;
+  color: white;
+  outline-style: none;
+  border: 1px solid #0384fc;
+  cursor: pointer;
+}
+@media screen and (max-width: 580px) {
+  .navbar{
+    height: 7vh;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar ul{
+    width: 100%; 
+    justify-content: space-around;
+  }
+  .navbar li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 200px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+  }
+  .list-container .list{
+    background-color:  #0384fc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 }
